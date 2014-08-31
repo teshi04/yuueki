@@ -1,6 +1,5 @@
 # coding: utf-8
-
-post '/yuueki' do
+get '/yuueki' do
   yuueki_words = ["有益", "@", "天気", "スレイン・トロイヤード", "花金"]
   text = params[:q]
   yuueki = false
