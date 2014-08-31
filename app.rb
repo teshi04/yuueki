@@ -1,6 +1,10 @@
 # coding: utf-8
+require 'yaml'
+
 get '/yuueki' do
-  yuueki_words = ["有益", "@", "天気", "スレイン・トロイヤード", "花金"]
+  path = File.expand_path(File.dirname(__FILE__))
+  yuueki_words = YAML::load(open(path + "/word.conf"))
+  
   text = params[:q]
   yuueki = false
   
